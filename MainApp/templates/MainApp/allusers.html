@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Users</title>
+  </head>
+  <body>
+    <div class="main-block">
+
+      {% for item in all_info %}
+        <h3>Name: {{ item.name }}</h3>
+        <p>Skills: </p>
+      {% endfor %}
+
+    </div>
+  </body>
+</html>
