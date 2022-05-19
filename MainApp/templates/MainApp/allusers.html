@@ -1,17 +1,53 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>All Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
   <body>
-    <div class="main-block">
 
-      {% for item in all_info %}
-        <h3>Name: {{ item.name }}</h3>
-        <p>Skills: </p>
-      {% endfor %}
+    <div class = "navbar-text">
+      <a href="{% url 'register' %}"> Register </a> | <a href="{% url 'login' %}"> Login </a>
+    <div>
 
-    </div>
+    <div class="all-users">
+      <div class="card">
+        <div class="card-body">
+
+          {% for item in all_info %}
+            <h3>Name: {{ item.name }}</h3>
+            <p>Skills: </p>
+          {% endfor %}
+
+        </div>
+      </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+
+
+
+<!-- <hr>
+</div>
+
+<div class = "all-ability">
+<h1> ALL ABILITY: </h1>
+
+{% for y in all_ability %}
+{% ifchanged y.category %}
+<br>{{ y.category }} -
+{% endifchanged %}
+{{ y.name }},
+{% endfor %}
+
+<p><a href="{% url 'add_ability' %}"> + add ability</a></p>
+<hr>
+</div> -->

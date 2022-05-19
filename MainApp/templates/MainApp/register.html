@@ -5,6 +5,13 @@
     <title>Register</title>
   </head>
   <body>
-    
+    <form class="" action="" method="post">
+
+      {% csrf_token %}
+      {{ form_djn_db.as_p }}
+      {{ form_usr_db.as_p }}
+
+      <button type="submit" name="button"> Registrate </button>
+    </form>
   </body>
 </html>

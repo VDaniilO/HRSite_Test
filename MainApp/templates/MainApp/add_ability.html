@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Users</title>
+  </head>
+  <body>
+    <div class="main-block">
+
+      <div class = "all-ability">
+          <form method="post">
+            Ability:
+            {% csrf_token %}
+            {{ form_ab.as_p }}
+            <button type="submit" name="button">Add ability</button>
+          </form>
+
+        <hr>
+      </div>
+
+      <div class = "all-categories">
+          <form method="post">
+            Category:
+            {% csrf_token %}
+            {{ form_cate.as_p }}
+            <button type="submit" name="button">Add Categories</button>
+          </form>
+
+        <hr>
+      </div>
+      <a href="{% url 'all_users' %}" > <button type="button" name="button"><- Back</button></a>
+    </div>
+  </body>
+</html>
